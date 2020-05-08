@@ -53,7 +53,7 @@ class Quizz {           // début class Quizz
       }else{
         fill(255); // sinon en blanc
       }
-      rect(width*0.05, height*(0.4075+ (i * 0.10)), height*0.025, height*0.025); // le rectangle
+      rect(width*0.5, height*(0.25+(i*0.10)), width*0.81, height*0.07);// le rectangle
     }
     testReponse(); // teste si on clique sur les petites cases et les mets a jour
     
@@ -78,7 +78,7 @@ class Quizz {           // début class Quizz
   void testReponse(){ // on teste si on clique sur un carré pour sélectionner une réponse
     if (mousePressed == true) {
       for(int i = 0; i < 4; i++){ // pour toutes les cases
-        if((mouseX > width*0.05) && (mouseX < width*0.05 + height*0.025) && (mouseY > height*(0.4075+ ((i - 1) * 0.10))) && (mouseY > height*(0.4075+ ((i - 1) * 0.10)) + height*0.025)){
+        if((mouseX > width*0.5) && (mouseX < width*0.5 + height*0.025) && (mouseY > height*(0.4075+ ((i - 1) * 0.10))) && (mouseY > height*(0.4075+ ((i - 1) * 0.10)) + height*0.025)){
           rd = i + 1;
         }
       }
